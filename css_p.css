@@ -1,0 +1,47 @@
+.carousel {
+    display: flex;
+    justify-content: center;
+    top: 0;
+
+}
+.movies {
+    display: flex;
+}
+
+.movie {
+    width: 200px;
+    height: 275px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+}
+
+body{
+    background-color: rgb(146, 36, 36);
+}
+
+#button{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(1, 1, 17);
+    border: 1.5px solid black;
+    cursor: pointer;
+
+}
+
+#best_movie{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#modal{
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    background-color: black;
+    color:white;
+    top:calc(50% - 150px);
+    left:calc(50% - 200px);
+}

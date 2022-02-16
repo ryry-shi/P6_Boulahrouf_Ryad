@@ -1,30 +1,73 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="fichier.css">
-        <script src="script.js" defer></script>
-        <title>first</title>
-    </head>
-    <body>
-        <h1 id="meilleurFilm">P6_Boulahrouf_ryad</h1>
-        <!-- <a href="https://www.developpez.net/forums/d1018399/javascript/bibliotheques-frameworks/jquery/afficher-l-attribut-alt-d-image-hover/"><img src="Sans titre.png"></a> -->
-        <div id ="menu">
-            <div id="carousel">
-                <img src="fleche.jpg" class="bouton" id="d">
-                <img src="fleche.jpg" class="bouton" id="g">
-                <div id="carousel_container">
-                </div>
-                <!-- img pour défiler -->
-
-            </div>
-            <div id="test"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            
-
+   <head>
+      <title>Le Netflix du pauvre</title>
+      <meta http-equiv="content-type" content="text/html;charset=utf-8">
+      <link rel="stylesheet" type="text/css" href="css_p.css">
+   </head>
+   <body>
+       <div class="try">
+           <h1></h1>
+           <h2></h2>
+       </div>
+       <div id="button" onClick="azer">azazazazaz</div>
+       <div id="page">title : </div>
+       <div id="modal">machin
+              <div id="modal_1">L’image de la pochette du film :</div>
+              <div id="modal_2">Le Titre du film :</div>
+              <div id="modal_3">Le genre complet du film :</div>
+              <div id="modal_4">Sa date de sortie :</div>
+              <div id="modal_5">Son Rated :</div>
+              <div id="modal_6">Son score Imdb :</div>
+              <div id="modal_7">Son réalisateur :</div>
+              <div id="modal_8">La liste des acteurs :</div>
+              <div id="modal_9">Sa durée :</div>
+              <div id="modal_10">Le pays d’origine :</div>
+              <div id="modal_11">Le résumé du film :</div>
         </div>
-    </body>
+        <div id="best_movie"></div>
+
+       <div class="carousel">
+           <button onclick="previous('romance')">Précédent</button>
+           <div class="movies" id="romance">
+            <div class="movie" id="movie_1_romance"></div>
+            <div class="movie" id="movie_2_romance"></div>
+            <div class="movie" id="movie_3_romance"></div>
+            <div class="movie" id="movie_4_romance"></div>
+            <div class="movie" id="movie_5_romance" style="display:none"></div>
+            <div class="movie" id="movie_6_romance" style="display:none"></div>
+            <div class="movie" id="movie_7_romance" style="display:none">   </div>
+            </div>
+           <button onclick="next('romance')">Suivant</button>
+       </div>
+       <div class="carousel">
+            <button onclick="previous('action')">Précédent</button>
+            <div class="movies" id="action">
+            <div class="movie" id="movie_1_action"></div>
+            <div class="movie" id="movie_2_action"></div>
+            <div class="movie" id="movie_3_action"></div>
+            <div class="movie" id="movie_4_action"></div>
+            <div class="movie" id="movie_5_action" style="display:none"></div>
+            <div class="movie" id="movie_6_action" style="display:none"></div>
+            <div class="movie" id="movie_7_action" style="display:none"></div>
+            </div>
+            <button onclick="next('action')">Suivant</button>
+    </div>
+        <div class="carousel">
+            <button onclick="previous('drama')">Précédent</button>
+            <div class="movies" id="drama">
+            <div class="movie" id="movie_1_drama"></div>
+            <div class="movie" id="movie_2_drama"></div>
+            <div class="movie" id="movie_3_drama"></div>
+            <div class="movie" id="movie_4_drama"></div>
+            <div class="movie" id="movie_5_drama" style="display:none"></div>
+            <div class="movie" id="movie_6_drama" style="display:none"></div>
+            <div class="movie" id="movie_7_drama" style="display:none"></div>
+            </div>
+            <button onclick="next('drama')">Suivant</button>
+        </div>
+   </body>
+   </style>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+   <script src="script_p.js"></script>
+   </script>
 </html>
