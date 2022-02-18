@@ -23,17 +23,19 @@ function update(genre) {
    }
 
 //function qui va ajouter les information dans le modal une par div dans les modal
-function modal_try_un(data){
-    description = ["title","actors","genres","duration","rated","directors" ,"countries","date_published","description","imdb_score","metascore"]
+async function modal_try_un(id){
+    const response = await fetch(`http://127.0.0.1:8000/api/v1/titles/${id}`)
+    const data = await response.json()
     movie_detail = data
-    for (var i = 1; i <= 11 ; i++){
-        //on trie les information une par une 
-        description_une_par_une = description[i]
-        console.log(description_une_par_une)
-        modal = document.getElementById(`modal_${i}`)
-        //on les ajoute une par une dans les div grâce a la boucle for
-        div = movie_detail[description_une_par_une]
-        modal.append(div)
+    for(const [key, value] of Object.entries(data)) {
+        let modal_info = document.getElementById(key)
+        if (modal_info != undefined){
+            document.querySelector(`#modal > #${key} > .title`).innerHMTL = key
+            document.querySelector(`#modal > #${value} > .title`).innerHTML = value
+        }
+        // //on les ajoute une par une dans les div grâce a la boucle for
+        // div = movie_detail[description_une_par_une]
+        // modal.innerHTML = div
     }
    }
 
@@ -89,18 +91,10 @@ let get_data_movies = async(genre)=>{
     const movies = await get_data(genre)
     movies.forEach((movie_data, index) => {
         $(`#movie_${index+1}_${genre}`).html(`
-            <a alt="${movie_data.url}" onclick=${modal_try_un(movie_data)}">
-                <img src="${movie_data.image_url}">
-            </a>
+            <img src="${movie_data.image_url}" onclick="modal_try_un(${movie_data.id})">
         `)
-        console.log(movie_data.url)
     });
 }
-
-// test.addEventListener('click', async function(){
-//     const response = await get_url()
-//     modal_try_un(response)
-// })
 
 document.addEventListener('DOMContentLoaded',function() {
     get_data_movies("romance")
