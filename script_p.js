@@ -22,20 +22,19 @@ function update(genre) {
     })
    }
 
+//function qui va ajouter les information dans le modal une par div dans les modal
 function modal_try_un(data){
-
-    console.log(Object.keys(data.results[0]))
-    // console.log(data.results[0].title)
-    // let movies_selector = $(`#modal`)
-    // let children = movies_selector.children()
-
-    // console.log(data.results[0].index(Le ali della libertà))
-
-
-    // console.log(data.results[0].title)
-    // title = document.getElementById("modal_1")
-    // title.append(data.results[0].title)
-
+    description = ["title","actors","genres","duration","rated","directors" ,"countries","date_published","description","imdb_score","metascore"]
+    movie_detail = data
+    for (var i = 1; i <= 11 ; i++){
+        //on trie les information une par une 
+        description_une_par_une = description[i]
+        console.log(description_une_par_une)
+        modal = document.getElementById(`modal_${i}`)
+        //on les ajoute une par une dans les div grâce a la boucle for
+        div = movie_detail[description_une_par_une]
+        modal.append(div)
+    }
    }
 
 
@@ -62,6 +61,13 @@ let get_data = async(genre)=>{
     return data.results
 }
 
+let get_url = async()=>{
+    const test = document.getElementById("test_click").textContent
+    const response = await fetch(test)
+    const data = await response.json()
+    return data
+}
+
 let get_best_movie = async()=>{
     const response = await fetch("http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score&sort_by=-votes&page_size=1")
     const data = await response.json()
@@ -72,27 +78,29 @@ let get_best_movie = async()=>{
     let img = document.createElement("img")
     img.src = data.results[0].image_url
     modal_un(img)
-    modal_try_un(data)
     div.appendChild(lien)
     lien.appendChild(img)
   }
+
+//   <a href="${movie_data.imdb_url}">
+
 
 let get_data_movies = async(genre)=>{
     const movies = await get_data(genre)
     movies.forEach((movie_data, index) => {
         $(`#movie_${index+1}_${genre}`).html(`
-            <a href="${movie_data.imdb_url}">
+            <a alt="${movie_data.url}" onclick=${modal_try_un(movie_data)}">
                 <img src="${movie_data.image_url}">
             </a>
         `)
-// let lien = document.createElement("a")
-// let img = document.createElement("img")
-// img.src = movie.image_url
-// lien.href = movie.imdb_url
-// movie.appendChild(lien)
-// lien.appendChild(img)            
+        console.log(movie_data.url)
     });
 }
+
+// test.addEventListener('click', async function(){
+//     const response = await get_url()
+//     modal_try_un(response)
+// })
 
 document.addEventListener('DOMContentLoaded',function() {
     get_data_movies("romance")

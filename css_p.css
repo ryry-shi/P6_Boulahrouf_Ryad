@@ -37,11 +37,17 @@ body{
 }
 
 #modal{
-    width: 400px;
-    height: 400px;
+    width: 80%px;
+    height: 50%px;
     position: fixed;
-    background-color: black;
+    background-color: rgb(192, 93, 93);
     color:white;
     top:calc(50% - 150px);
     left:calc(50% - 200px);
+}
+
+#test_click{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
 }
