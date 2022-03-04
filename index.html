@@ -1,55 +1,61 @@
 <html>
    <head>
-      <title>Le Netflix du pauvre</title>
+      <title>le netflix du povre</title>
       <meta http-equiv="content-type" content="text/html;charset=utf-8">
       <link rel="stylesheet" type="text/css" href="css_p.css">
    </head>
-   <body>
-       <div id="modal">
+   <body onclick="close_modal()">
+    <header>JustStreamIt Accueil Catégories</header>
+       <div id="modal" >
               <div id="title">
                   <div class="title"></div>
-                  <div class="value"></div>
+                  <!-- <div class="value"></div> -->
               </div>
               <div id="actors">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="genres">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="duration">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="rated">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="directors">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="countries">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="date_published">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="description">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="imdb_score">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
               <div id="metascore">
                   <div class="title"></div>
-                  <div class="value"></div>
-              </div>
+                  <!-- <div class="value"></div> -->
+                </div>
+              <div id="image_url">
+                <div class="title"></div>
+                  <!-- <div class="value"></div> -->
+                </div>
+        
         </div>
 
 <!-- L’image de la pochette du film
@@ -64,10 +70,26 @@ Sa durée
 Le pays d’origine
 Le résultat au Box Office
 Le résumé du film -->
+        <div id="first_movie">first_movie</div>
         <div id="best_movie"></div>
-
+        →
+        <div class="carousel">
+            <div class="genre"></div>
+            <button onclick="previous('best')">←</button>
+            <div class="movies" id="best">
+            <div class="movie" id="movie_1_best"></div>
+            <div class="movie" id="movie_2_best"></div>
+            <div class="movie" id="movie_3_best"></div>
+            <div class="movie" id="movie_4_best"></div>
+            <div class="movie" id="movie_5_best" style="display:none"></div>
+            <div class="movie" id="movie_6_best" style="display:none"></div>
+            <div class="movie" id="movie_7_best" style="display:none"></div>
+            </div>
+            <button onclick="next('best')">→</button>
+        </div>
+        <div id="romance_carousel">Romance</div>
        <div class="carousel">
-           <button onclick="previous('romance')">Précédent</button>
+           <button onclick="previous('romance')">←</button>
            <div class="movies" id="romance">
             <div class="movie" id="movie_1_romance"></div>
             <div class="movie" id="movie_2_romance"></div>
@@ -75,12 +97,13 @@ Le résumé du film -->
             <div class="movie" id="movie_4_romance"></div>
             <div class="movie" id="movie_5_romance" style="display:none"></div>
             <div class="movie" id="movie_6_romance" style="display:none"></div>
-            <div class="movie" id="movie_7_romance" style="display:none">   </div>
+            <div class="movie" id="movie_7_romance" style="display:none"></div>
             </div>
-           <button onclick="next('romance')">Suivant</button>
+           <button onclick="next('romance')">→</button>
        </div>
+       <div id="action_carousel">Action</div>
        <div class="carousel">
-            <button onclick="previous('action')">Précédent</button>
+            <button onclick="previous('action')">←</button>
             <div class="movies" id="action">
             <div class="movie" id="movie_1_action"></div>
             <div class="movie" id="movie_2_action"></div>
@@ -90,10 +113,11 @@ Le résumé du film -->
             <div class="movie" id="movie_6_action" style="display:none"></div>
             <div class="movie" id="movie_7_action" style="display:none"></div>
             </div>
-            <button onclick="next('action')">Suivant</button>
+            <button onclick="next('action')">→</button>
     </div>
+    <div id="drama_carousel">Drama</div>
         <div class="carousel">
-            <button onclick="previous('drama')">Précédent</button>
+            <button onclick="previous('drama')">←</button>
             <div class="movies" id="drama">
             <div class="movie" id="movie_1_drama"></div>
             <div class="movie" id="movie_2_drama"></div>
@@ -103,8 +127,9 @@ Le résumé du film -->
             <div class="movie" id="movie_6_drama" style="display:none"></div>
             <div class="movie" id="movie_7_drama" style="display:none"></div>
             </div>
-            <button onclick="next('drama')">Suivant</button>
+            <button onclick="next('drama')">→</button>
         </div>
+        
    </body>
    </style>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

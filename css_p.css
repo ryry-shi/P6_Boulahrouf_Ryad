@@ -1,18 +1,14 @@
-.carousel {
-    display: flex;
-    justify-content: center;
-    top: 0;
-
-}
-.movies {
-    display: flex;
-}
-
-.movie {
-    width: 200px;
-    height: 275px;
-    background-color: lightgrey;
-    border: 1px solid black;
+header{
+    width : 800px;
+    height: 200px;
+    line-height: 180px;
+    border-radius: 10px;
+    border: 10px solid;
+    border-color: blueviolet;
+    background : rgba(145, 255, 0, 0.301);
+    font-size: 30px;
+    margin : auto;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -20,12 +16,38 @@ body{
     background-color: rgb(146, 36, 36);
 }
 
-#button{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(1, 1, 17);
+.carousel {
+    display: flex;
+    justify-content: center;
+    top: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.movies {
+    display: flex;
+}
+
+.movie {
     border: 1.5px solid black;
-    cursor: pointer;
+    text-align: center;
+}
+
+.title{
+    max-width: 500px;
+    max-height: 500px;
+}
+
+
+body{
+    background-color: rgb(146, 36, 36);
+}
+
+button{
+    font-size: 60px;
+    background: none;
+    color: rgb(224, 212, 212);
+    border: 0px;
 
 }
 
@@ -34,20 +56,36 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #modal{
-    width: 80%px;
-    height: 50%px;
+    width: 1800px;
+    height: 600px;
     position: fixed;
-    background-color: rgb(192, 93, 93);
-    color:white;
-    top:calc(50% - 150px);
-    left:calc(50% - 200px);
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 6px;
+    border: 5px solid white;
+    background-color: rgb(48, 6, 146);
+    color:rgb(255, 255, 255);
+    opacity: 0.95;
+    top:calc(50% - 300px);
+    left:calc(30% - 400px);
+    display: none;
 }
 
-#test_click{
-    width: 200px;
-    height: 200px;
-    background-color: blue;
-}
+#image_url {
+    text-align: right;
+    margin-top:-250px;
+ }
+
+ #first_movie{
+    width:170px;
+    margin:auto;
+    font-size: 36px;
+    color:white;
+    border-bottom: 3px solid;
+ }
