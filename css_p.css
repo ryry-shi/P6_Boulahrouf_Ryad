@@ -38,6 +38,9 @@ body{
     max-height: 500px;
 }
 
+.hidden{
+    display: none;
+}
 
 body{
     background-color: rgb(146, 36, 36);

@@ -1,5 +1,5 @@
-<html>
-   <head>
+<!DOCTYPE html>
+<head>
       <title>le netflix du povre</title>
       <meta http-equiv="content-type" content="text/html;charset=utf-8">
       <link rel="stylesheet" type="text/css" href="css_p.css">
@@ -57,19 +57,7 @@
                 </div>
         
         </div>
-
-<!-- L’image de la pochette du film
-Le Titre du film
-Le genre complet du film
-Sa date de sortie
-Son Rated
-Son score Imdb
-Son réalisateur
-La liste des acteurs
-Sa durée
-Le pays d’origine
-Le résultat au Box Office
-Le résumé du film -->
+        
         <div id="first_movie">first_movie</div>
         <div id="best_movie"></div>
         →
@@ -81,9 +69,9 @@ Le résumé du film -->
             <div class="movie" id="movie_2_best"></div>
             <div class="movie" id="movie_3_best"></div>
             <div class="movie" id="movie_4_best"></div>
-            <div class="movie" id="movie_5_best" style="display:none"></div>
-            <div class="movie" id="movie_6_best" style="display:none"></div>
-            <div class="movie" id="movie_7_best" style="display:none"></div>
+            <div class="movie hidden" id="movie_5_best"></div>
+            <div class="movie hidden" id="movie_6_best"></div>
+            <div class="movie hidden" id="movie_7_best"></div>
             </div>
             <button onclick="next('best')">→</button>
         </div>
@@ -95,9 +83,9 @@ Le résumé du film -->
             <div class="movie" id="movie_2_romance"></div>
             <div class="movie" id="movie_3_romance"></div>
             <div class="movie" id="movie_4_romance"></div>
-            <div class="movie" id="movie_5_romance" style="display:none"></div>
-            <div class="movie" id="movie_6_romance" style="display:none"></div>
-            <div class="movie" id="movie_7_romance" style="display:none"></div>
+            <div class="movie hidden" id="movie_5_romance" style="display:none"></div>
+            <div class="movie hidden" id="movie_6_romance" style="display:none"></div>
+            <div class="movie hidden" id="movie_7_romance" style="display:none"></div>
             </div>
            <button onclick="next('romance')">→</button>
        </div>
@@ -109,9 +97,9 @@ Le résumé du film -->
             <div class="movie" id="movie_2_action"></div>
             <div class="movie" id="movie_3_action"></div>
             <div class="movie" id="movie_4_action"></div>
-            <div class="movie" id="movie_5_action" style="display:none"></div>
-            <div class="movie" id="movie_6_action" style="display:none"></div>
-            <div class="movie" id="movie_7_action" style="display:none"></div>
+            <div class="movie hidden" id="movie_5_action" style="display:none"></div>
+            <div class="movie hidden" id="movie_6_action" style="display:none"></div>
+            <div class="movie hidden" id="movie_7_action" style="display:none"></div>
             </div>
             <button onclick="next('action')">→</button>
     </div>
@@ -123,16 +111,13 @@ Le résumé du film -->
             <div class="movie" id="movie_2_drama"></div>
             <div class="movie" id="movie_3_drama"></div>
             <div class="movie" id="movie_4_drama"></div>
-            <div class="movie" id="movie_5_drama" style="display:none"></div>
-            <div class="movie" id="movie_6_drama" style="display:none"></div>
-            <div class="movie" id="movie_7_drama" style="display:none"></div>
+            <div class="movie hidden" id="movie_5_drama"></div>
+            <div class="movie hidden" id="movie_6_drama"></div>
+            <div class="movie hidden" id="movie_7_drama"></div>
             </div>
             <button onclick="next('drama')">→</button>
         </div>
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="script_p.js"></script>
    </body>
-   </style>
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-   <script src="script_p.js"></script>
-   </script>
 </html>
