@@ -27,6 +27,7 @@ function all_name(){
     carousel_cate("romance", "blue")
     carousel_cate("action", "green")
     carousel_cate("drama", "white")
+    carousel_cate("best", "yellow")
 }
 
 //function qui va ajouter les information dans le modal une par div dans les modal
@@ -37,7 +38,6 @@ function carousel_cate(genre, color= string){
     test.style.heigh = "200px"
     test.style.fontSize = "32px"
     test.style.margin = "auto"
-    test.style.position = "relative"
     test.style.display = "fixed"
     test.style.padding = "10px"
     test.style.borderBottom = "solid"
@@ -96,7 +96,7 @@ let get_movies = async (genre = "") => {
 let setup_best_movie = async () => {
     const movie_data = await get_movies()
     $(`#best_movie`).html(`
-        <img src="${movie_data[0].image_url}" onclick="setup_modal(${movie_data[0].id})"></img>
+        <img src="${movie_data[0].image_url}"height=450px onclick="setup_modal(${movie_data[0].id})"></img>
     `) 
   }
 

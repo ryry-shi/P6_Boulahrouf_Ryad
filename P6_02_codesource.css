@@ -28,11 +28,6 @@ body{
     display: flex;
 }
 
-.movie {
-    border: 1.5px solid black;
-    text-align: center;
-}
-
 .title{
     max-width: 500px;
     max-height: 500px;
@@ -51,20 +46,15 @@ button{
     background: none;
     color: rgb(224, 212, 212);
     border: 0px;
-
 }
 
 #best_movie{
-    width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 #modal{
-    width: 1800px;
+    width: 1500px;
     height: 600px;
     position: fixed;
     padding: 20px;
@@ -85,10 +75,3 @@ button{
     margin-top:-250px;
  }
 
- #first_movie{
-    width:170px;
-    margin:auto;
-    font-size: 36px;
-    color:white;
-    border-bottom: 3px solid;
- }
